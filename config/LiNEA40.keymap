@@ -66,39 +66,174 @@
     combos {
         compatible = "zmk,combos";
 
-        ZenkakuHankaku {
-            bindings = <&kp GRAVE>;
+        u {
+            bindings = <&kp U>;
+            key-positions = <3 4>;
+            layers = <0>;
+            timeout-ms = <90>;
+        };
+
+        p {
+            bindings = <&kp P>;
+            key-positions = <4 5>;
+            layers = <0>;
+        };
+
+        x {
+            bindings = <&kp X>;
+            key-positions = <3 5>;
+            layers = <0>;
+            timeout-ms = <90>;
+        };
+
+        i {
+            bindings = <&kp I>;
+            key-positions = <10 11>;
+            layers = <0>;
+            timeout-ms = <80>;
+        };
+
+        o {
+            bindings = <&kp O>;
             key-positions = <11 12>;
+            layers = <0>;
+            timeout-ms = <90>;
         };
 
-        DeleteKey {
-            bindings = <&kp DEL>;
+        f {
+            bindings = <&kp F>;
+            key-positions = <2 1>;
+            layers = <0>;
+        };
+
+        r {
+            bindings = <&kp R>;
+            key-positions = <0 1>;
+            layers = <0>;
+            timeout-ms = <90>;
+        };
+
+        q {
+            bindings = <&kp Q>;
+            key-positions = <0 2>;
+            layers = <0>;
+            timeout-ms = <90>;
+        };
+
+        v {
+            bindings = <&kp V>;
+            key-positions = <9 8>;
+            layers = <0>;
+        };
+
+        c {
+            bindings = <&kp C>;
             key-positions = <7 8>;
+            layers = <0>;
         };
 
-        InsertKey {
-            bindings = <&kp INS>;
-            key-positions = <6 7>;
+        backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <0 1>;
+            layers = <1>;
         };
 
-        CenterClick {
-            bindings = <&mkp MB3>;
-            key-positions = <17 16>;
+        leftbracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <2 1>;
+            layers = <1>;
         };
 
-        RightClick {
-            bindings = <&mkp MB2>;
-            key-positions = <18 17>;
+        rightbraket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <3 4>;
+            layers = <1>;
         };
 
-        PrevClick {
-            bindings = <&mkp MB4>;
-            key-positions = <27 28>;
+        slash {
+            bindings = <&kp SLASH>;
+            key-positions = <4 5>;
+            layers = <1>;
         };
 
-        ClickNext {
-            bindings = <&mkp MB5>;
-            key-positions = <26 27>;
+        medialayer {
+            bindings = <&mo 3>;
+            key-positions = <6 13>;
+            layers = <0>;
+        };
+
+        colon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <10 11>;
+            layers = <1>;
+        };
+
+        quote {
+            bindings = <&kp SQT>;
+            key-positions = <12 11>;
+            layers = <1>;
+        };
+
+        z {
+            bindings = <&kp Z>;
+            key-positions = <7 9>;
+            layers = <0>;
+            timeout-ms = <90>;
+        };
+
+        b {
+            bindings = <&kp B>;
+            key-positions = <10 12>;
+            layers = <0>;
+            timeout-ms = <90>;
+        };
+
+        tilde {
+            bindings = <&kp GRAVE>;
+            key-positions = <8 9>;
+            layers = <1>;
+        };
+
+        f11 {
+            bindings = <&kp F11>;
+            key-positions = <7 8>;
+            layers = <2>;
+        };
+
+        f12 {
+            bindings = <&kp F12>;
+            key-positions = <8 9>;
+            layers = <2>;
+        };
+
+        comma {
+            bindings = <&kp COMMA>;
+            key-positions = <11 16>;
+            layers = <0>;
+        };
+
+        period {
+            bindings = <&kp PERIOD>;
+            key-positions = <12 16>;
+            layers = <0>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <1 0>;
+            layers = <2>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <4 5>;
+            layers = <2>;
+        };
+
+        caps {
+            bindings = <&caps_word>;
+            key-positions = <0 5>;
+            layers = <0>;
         };
     };
 
