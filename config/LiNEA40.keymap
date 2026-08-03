@@ -56,7 +56,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,
+            //スクロール方向を逆転,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -119,7 +119,7 @@
         cmt: custom_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "CUSTOM_MOD_TAP";
-            bindings = <&none>, <&none>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <160>;
@@ -130,7 +130,7 @@
         clt: custom_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "CUSTOM_LAYER_TAP";
-            bindings = <&none>, <&none>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <160>;
@@ -144,13 +144,71 @@
 
         default {
             bindings = <
-&none  &none  &none  &none  &none                  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none                  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none                  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none         &none  &none  &none
+&none                &none              &none                &none            &none                         &none         &none             &none                 &none               &none
+&none                &cmt LEFT_SHIFT W  &cmt LEFT_CONTROL E  &cmt LEFT_ALT T  &none                         &none         &cmt RIGHT_ALT Y  &cmt RIGHT_CONTROL N  &cmt RIGHT_SHIFT M  &none
+&cmt LEFT_GUI LC(A)  &kp S              &kp D                &kp G            &none                         &none         &kp H             &kp J                 &kp K               &cmt RIGHT_GUI L
+&none                &none              &none                &kp BACKSPACE    &clt 2 SPACE  &none    &none  &clt 1 ENTER                    &none                 &none               &none
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+        };
+
+        number_cursor {
+            bindings = <
+&trans            &trans                    &trans                      &trans                  &trans                        &trans         &trans                   &trans             &trans                     &trans
+&trans            &cmt LEFT_SHIFT NUMBER_1  &cmt LEFT_CONTROL NUMBER_2  &cmt LEFT_ALT NUMBER_3  &trans                        &trans         &cmt RIGHT_ALT NUMBER_4  &cmt RIGHT_ALT N5  &cmt RIGHT_SHIFT NUMBER_6  &trans
+&cmt LEFT_GUI N7  &kp N8                    &kp N9                      &kp N0                  &trans                        &trans         &kp LEFT_ARROW           &kp DOWN_ARROW     &kp UP_ARROW               &cmt RIGHT_GUI RIGHT_ARROW
+&trans            &trans                    &trans                      &kp DELETE              &clt 2 TAB  &trans    &trans  &clt 1 ESCAPE                           &trans             &trans                     &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
+        };
+
+        function {
+            bindings = <
+&trans            &trans              &trans                &trans            &trans                        &trans         &trans             &trans                 &trans               &trans
+&trans            &cmt LEFT_SHIFT F1  &cmt LEFT_CONTROL F2  &cmt LEFT_ALT F3  &trans                        &trans         &cmt RIGHT_ALT F4  &cmt RIGHT_CONTROL F5  &cmt RIGHT_SHIFT F6  &trans
+&cmt LEFT_GUI F7  &kp F8              &kp F9                &kp F10           &trans                        &trans         &kp PAGE_UP        &kp PAGE_DOWN          &kp HOME             &cmt RIGHT_GUI END
+&trans            &trans              &trans                &kp DELETE        &clt 2 TAB  &trans    &trans  &clt 1 ESCAPE                     &trans                 &trans               &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
+        };
+
+        media {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
+            >;
+        };
+
+        ble {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
+            >;
+        };
+
+        scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
+            >;
         };
 
         //1
