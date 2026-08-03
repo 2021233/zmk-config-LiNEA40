@@ -123,7 +123,7 @@
 
         c {
             bindings = <&kp C>;
-            key-positions = <21 21 22>;
+            key-positions = <21 22>;
             layers = <0>;
         };
 
