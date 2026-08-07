@@ -1,8 +1,8 @@
 #include "LiNEA40.dtsi"
+#include <input/processors.dtsi>
 &default_transform {
     col-offset = <6>;
 };
-
 &kscan0 {
     col-gpios
         = <&xiao_d 10 GPIO_ACTIVE_HIGH> //col0-D10
