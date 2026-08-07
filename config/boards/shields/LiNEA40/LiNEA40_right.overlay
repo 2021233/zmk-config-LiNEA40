@@ -1,5 +1,4 @@
 #include "LiNEA40.dtsi"
-#include <input/processors.dtsi>
 &default_transform {
     col-offset = <6>;
 };
@@ -59,10 +58,6 @@
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //MOT-D6
         snipe-layers = <2>;
         scroll-layers = <4>;
-        input-processors = <
-            &zip_xy_to_scroll_mapper
-            &zip_scroll_scaler 3 2
-        >;
         //scroll-layers = <4 5 6>;
     };
 };
