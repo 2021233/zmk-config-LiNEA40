@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -285,10 +285,10 @@
 
         default {
             bindings = <
-&none            &none              &none                &none             &none                         &none         &none             &none                 &none               &none
-&none            &cmt LEFT_SHIFT W  &cmt LEFT_CONTROL E  &cmt LEFT_ALT T   &none                         &none         &cmt RIGHT_ALT U  &cmt RIGHT_CONTROL I  &cmt RIGHT_SHIFT O  &none
-&cmt LEFT_GUI A  &kp S              &kp D                &kp G             &none                         &none         &kp H             &kp J                 &kp K               &cmt RIGHT_GUI L
-&none            &none              &none                &clt 3 BACKSPACE  &clt 2 SPACE  &none    &none  &clt 1 ENTER                    &none                 &none               &none
+&none  &none              &none                &none             &none                         &none         &none             &none                 &none               &none
+&none  &cmt LEFT_SHIFT W  &cmt LEFT_CONTROL E  &cmt LEFT_ALT T   &none                         &none         &cmt RIGHT_ALT U  &cmt RIGHT_CONTROL I  &cmt RIGHT_SHIFT O  &none
+&kp A  &kp S              &kp D                &cmt LEFT_GUI G   &none                         &none         &cmt RIGHT_GUI H  &kp J                 &kp K               &kp L
+&none  &none              &none                &clt 3 BACKSPACE  &clt 2 SPACE  &none    &none  &clt 1 ENTER                    &none                 &none               &none
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -296,10 +296,10 @@
 
         number_cursor {
             bindings = <
-&trans            &trans                    &trans                      &trans                  &trans                        &trans         &trans                   &trans                 &trans                     &trans
-&trans            &cmt LEFT_SHIFT NUMBER_1  &cmt LEFT_CONTROL NUMBER_2  &cmt LEFT_ALT NUMBER_3  &trans                        &trans         &cmt RIGHT_ALT NUMBER_4  &cmt RIGHT_CONTROL N5  &cmt RIGHT_SHIFT NUMBER_6  &trans
-&cmt LEFT_GUI N7  &kp N8                    &kp N9                      &kp N0                  &trans                        &trans         &kp LEFT_ARROW           &kp DOWN_ARROW         &kp UP_ARROW               &cmt RIGHT_GUI RIGHT_ARROW
-&trans            &trans                    &trans                      &kp DELETE              &clt 2 TAB  &trans    &trans  &clt 1 ESCAPE                           &trans                 &trans                     &trans
+&trans  &trans                    &trans                      &trans                  &trans                        &trans         &trans                     &trans                 &trans                     &trans
+&trans  &cmt LEFT_SHIFT NUMBER_1  &cmt LEFT_CONTROL NUMBER_2  &cmt LEFT_ALT NUMBER_3  &trans                        &trans         &cmt RIGHT_ALT NUMBER_4    &cmt RIGHT_CONTROL N5  &cmt RIGHT_SHIFT NUMBER_6  &trans
+&kp N7  &kp N8                    &kp N9                      &cmt LEFT_GUI N0        &trans                        &trans         &cmt RIGHT_GUI LEFT_ARROW  &kp DOWN_ARROW         &kp UP_ARROW               &kp RIGHT_ARROW
+&trans  &trans                    &trans                      &kp DELETE              &clt 2 TAB  &trans    &trans  &clt 1 ESCAPE                             &trans                 &trans                     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
@@ -307,10 +307,10 @@
 
         function {
             bindings = <
-&trans            &trans              &trans                &trans            &trans                        &trans         &trans             &trans                 &trans               &trans
-&trans            &cmt LEFT_SHIFT F1  &cmt LEFT_CONTROL F2  &cmt LEFT_ALT F3  &trans                        &trans         &cmt RIGHT_ALT F4  &cmt RIGHT_CONTROL F5  &cmt RIGHT_SHIFT F6  &trans
-&cmt LEFT_GUI F7  &kp F8              &kp F9                &kp F10           &trans                        &trans         &kp PAGE_UP        &kp PAGE_DOWN          &kp HOME             &cmt RIGHT_GUI END
-&trans            &trans              &trans                &kp DELETE        &clt 2 TAB  &trans    &trans  &clt 1 ESCAPE                     &trans                 &trans               &trans
+&trans  &trans              &trans                &trans             &trans                        &trans         &trans                  &trans                 &trans               &trans
+&trans  &cmt LEFT_SHIFT F1  &cmt LEFT_CONTROL F2  &cmt LEFT_ALT F3   &trans                        &trans         &cmt RIGHT_ALT F4       &cmt RIGHT_CONTROL F5  &cmt RIGHT_SHIFT F6  &trans
+&kp F7  &kp F8              &kp F9                &cmt LEFT_GUI F10  &trans                        &trans         &cmt RIGHT_GUI PAGE_UP  &kp PAGE_DOWN          &kp HOME             &kp END
+&trans  &trans              &trans                &kp DELETE         &clt 2 TAB  &trans    &trans  &clt 1 ESCAPE                          &trans                 &trans               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
@@ -318,10 +318,10 @@
 
         mouse {
             bindings = <
-&trans        &trans          &trans            &trans        &trans                    &trans         &trans    &trans    &trans    &trans
-&trans        &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans                    &trans         &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&kp LEFT_GUI  &none           &none             &none         &trans                    &trans         &mkp MB4  &mkp MB5  &mo 4     &none
-&trans        &trans          &trans            &to 0         &none   &trans    &trans  &clt 1 ESCAPE            &trans    &trans    &trans
+&trans  &trans          &trans            &trans        &trans                    &trans         &trans    &trans    &trans    &trans
+&trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans                    &trans         &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&none   &none           &none             &kp LEFT_GUI  &trans                    &trans         &mkp MB4  &mkp MB5  &mo 4     &none
+&trans  &trans          &trans            &to 0         &none   &trans    &trans  &clt 1 ESCAPE            &trans    &trans    &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -338,10 +338,10 @@
 
         ble {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                    &trans  &trans        &trans        &trans  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                    &trans  &bt BT_SEL 3  &bt BT_SEL 4  &none   &trans
-&none   &none         &none         &none         &trans                    &trans  &none         &none         &none   &none
-&trans  &trans        &trans        &bt BT_CLR    &none   &trans    &trans  &none                 &trans        &trans  &trans
+&trans  &trans          &trans            &trans        &trans                    &trans  &trans        &trans        &trans        &trans
+&trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans                    &trans  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&none   &bt BT_SEL 0    &bt BT_SEL 1      &kp LEFT_GUI  &trans                    &trans  &none         &none         &none         &none
+&trans  &trans          &trans            &bt BT_CLR    &none   &trans    &trans  &none                 &trans        &trans        &trans
             >;
         };
 
